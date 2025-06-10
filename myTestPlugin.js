@@ -4,19 +4,11 @@ const plugin = {
     name: "MyTestPlugin",
     start() {
         console.log("Plugin started");
-        showNotification?.({
-            title: "Plugin Test",
-            body: "Plugin loaded successfully",
-            noPersist: true,
-        });
+        alert("Plugin started");
     },
     stop() {
         console.log("Plugin stopped");
-        showNotification?.({
-            title: "Plugin Test",
-            body: "Plugin stopped",
-            noPersist: true,
-        });
+        alert("Plugin stopped");
     }
 };
 
