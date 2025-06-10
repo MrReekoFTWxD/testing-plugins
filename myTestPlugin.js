@@ -1,14 +1,22 @@
-import { showToast } from "@api/toasts";
+import { showNotification } from "@api/Notifications";
 
 const plugin = {
     name: "MyTestPlugin",
     start() {
         console.log("MyTestPlugin started!");
-        showToast("Hello from plugin!", { type: "success" });
+         showNotification({
+                title: "test",
+                body: `plugin loaded!`,
+                noPersist: true,
+            });
     },
     stop() {
         console.log("MyTestPlugin stopped!");
-       showToast("Plugin stopped!", { type: "info" });
+         showNotification({
+                title: "test",
+                body: `plugin stopped!`,
+                noPersist: true,
+            });
     }
 };
 
