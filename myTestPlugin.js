@@ -1,12 +1,14 @@
+import { showToast } from "@api/toasts";
+
 const plugin = {
-    name: "MyPlugin",
+    name: "MyTestPlugin",
     start() {
-        console.log("MyPlugin started!");
-        BdApi?.showToast?.("MyPlugin loaded", { type: "success" });
+        console.log("MyTestPlugin started!");
+        showToast("Hello from plugin!", { type: "success" });
     },
     stop() {
-        console.log("MyPlugin stopped!");
-        BdApi?.showToast?.("MyPlugin unloaded", { type: "info" });
+        console.log("MyTestPlugin stopped!");
+       showToast("Plugin stopped!", { type: "info" });
     }
 };
 
